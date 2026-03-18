@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMaroc — Voitures d'occasion à Casablanca, Maroc</title>
+  <meta name="description" content="AutoMaroc, votre spécialiste de la voiture d'occasion à Casablanca. Plus de 50 véhicules vérifiés, prix transparents, essai possible. Contactez-nous sur WhatsApp.">
+  <meta name="keywords" content="voiture occasion casablanca, سيارات مستعملة الدار البيضاء, used cars casablanca, auto maroc">
+  <meta property="og:title" content="AutoMaroc — Voitures d'occasion Casablanca">
+  <meta property="og:description" content="Plus de 50 voitures d'occasion à Casablanca. Qualité et transparence garanties.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://automaroc.com">
+  <link rel="canonical" href="https://automaroc.com">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      AUTO<span class="red">MAROC</span><span class="dot">.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="voitures.html" data-i18n="nav_cars">Voitures</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" data-lang="ar" onclick="setLang('ar')">AR</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="tel:+33646064391" class="nav-phone">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.4 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +33 6 46 06 43 91
+      </a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" data-i18n="nav_home">Accueil</a>
+  <a href="voitures.html" data-i18n="nav_cars">Voitures</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <div class="lang-switcher" style="padding:8px 0">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" data-lang="ar" onclick="setLang('ar')">AR</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+  <a href="tel:+33646064391" class="btn btn-red" style="justify-content:center">📞 +33 6 46 06 43 91</a>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span></span>
+        <span data-i18n="hero_badge">N°1 à Casablanca</span>
+      </div>
+      <h1 class="hero-title">
+        <span data-i18n="hero_title_1">Trouvez votre</span><br>
+        <span class="red" data-i18n="hero_title_2">voiture idéale</span><br>
+        <span class="stroke">au Maroc</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">
+        Plus de 50 voitures d'occasion sélectionnées, vérifiées et garanties à Casablanca, Maroc.
+      </p>
+      <div class="hero-btns">
+        <a href="voitures.html" class="btn btn-red">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span data-i18n="hero_btn1">Voir nos voitures</span>
+        </a>
+        <a href="https://wa.me/33646064391" target="_blank" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          <span data-i18n="hero_btn2">Nous contacter</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">50+</div>
+          <div class="stat-label" data-i18n="stat1">Voitures</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">500+</div>
+          <div class="stat-label" data-i18n="stat2">Clients satisfaits</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">8</div>
+          <div class="stat-label" data-i18n="stat3">Années d'exp.</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=85" alt="Voiture occasion Casablanca" class="hero-img">
+      <div class="hero-img-badge">
+        <span class="big">DH</span>
+        <span class="small">Prix négociables</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SEARCH BOX ====== -->
+<section class="search-section">
+  <div class="container">
+    <div class="search-box">
+      <div class="search-field">
+        <label data-i18n="search_brand">Marque</label>
+        <select id="filterBrand">
+          <option value="">Toutes les marques</option>
+          <option>Dacia</option><option>Renault</option><option>Peugeot</option>
+          <option>Volkswagen</option><option>Toyota</option><option>Hyundai</option>
+          <option>Citroën</option><option>Ford</option><option>Seat</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label data-i18n="search_budget">Budget max (DH)</label>
+        <select id="filterBudget">
+          <option value="">Tout budget</option>
+          <option value="70000">70 000 DH</option>
+          <option value="100000">100 000 DH</option>
+          <option value="130000">130 000 DH</option>
+          <option value="200000">200 000 DH</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label data-i18n="search_fuel">Carburant</label>
+        <select id="filterFuel">
+          <option value="">Tous</option>
+          <option>Diesel</option>
+          <option>Essence</option>
+          <option>Hybride</option>
+          <option>Électrique</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label>Boîte</label>
+        <select id="filterBoite">
+          <option value="">Toutes</option>
+          <option>Manuelle</option>
+          <option>Automatique</option>
+        </select>
+      </div>
+      <button class="btn btn-red" onclick="searchRedirect()" style="height:48px;white-space:nowrap">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <span data-i18n="search_btn">Rechercher</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ====== LATEST CARS ====== -->
+<section style="padding-top:80px">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="latest_tag">Annonces récentes</div>
+      <h2 class="section-title" data-i18n="latest_title">Nos dernières voitures</h2>
+    </div>
+    <div class="cars-grid" id="latestCars">
+      <!-- Skeleton loading -->
+      <div class="skeleton skel-card"></div>
+      <div class="skeleton skel-card"></div>
+      <div class="skeleton skel-card"></div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="voitures.html" class="btn btn-dark">
+        <span data-i18n="see_more">Voir toutes les voitures</span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHY US ====== -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="why_tag">Pourquoi nous</div>
+      <h2 class="section-title" data-i18n="why_title">La différence AutoMaroc</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">✅</div>
+        <div class="why-title">Voitures vérifiées</div>
+        <div class="why-text">Chaque véhicule passe un contrôle technique complet avant la mise en vente.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <div class="why-title">Prix transparents</div>
+        <div class="why-text">Pas de frais cachés. Le prix affiché est le prix réel. Négociation possible.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚗</div>
+        <div class="why-title">Essai possible</div>
+        <div class="why-text">Vous pouvez essayer la voiture avant d'acheter. Prise de rendez-vous rapide.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <div class="why-title">Réponse rapide</div>
+        <div class="why-text">Notre équipe répond en moins d'une heure sur WhatsApp, 7j/7.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📋</div>
+        <div class="why-title">Paperasse facilitée</div>
+        <div class="why-text">Nous vous accompagnons dans toutes les démarches administratives.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <div class="why-title">8 ans d'expérience</div>
+        <div class="why-text">Plus de 500 clients satisfaits depuis 2015 à Casablanca.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA BANNER ====== -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 data-i18n="cta_title">Vous avez une question ?</h2>
+    <p data-i18n="cta_sub">Notre équipe répond en moins d'une heure sur WhatsApp.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/33646064391?text=Bonjour, j'ai une question sur vos voitures." target="_blank" class="btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        <span data-i18n="cta_btn1">Contacter sur WhatsApp</span>
+      </a>
+      <a href="tel:+33646064391" class="btn btn-outline">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.4 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="cta_btn2">Appeler maintenant</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">AUTO<span class="red">MAROC</span><span class="dot">.</span></a>
+        <p data-i18n="footer_desc">Votre spécialiste de la voiture d'occasion à Casablanca. Qualité, transparence et confiance depuis 2015.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links">Liens rapides</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="voitures.html" data-i18n="nav_cars">Voitures</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Catégories</h4>
+        <ul>
+          <li><a href="voitures.html?fuel=Diesel">Diesel</a></li>
+          <li><a href="voitures.html?fuel=Essence">Essence</a></li>
+          <li><a href="voitures.html?boite=Automatique">Automatique</a></li>
+          <li><a href="voitures.html?budget=100000">Moins de 100 000 DH</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Contact</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.4 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +33 6 46 06 43 91
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Casablanca, Maroc
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Lun–Sam : 9h–19h
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 <span>AutoMaroc</span> — Tous droits réservés · Casablanca, Maroc
+    </div>
+  </div>
+</footer>
+
+<!-- ====== WHATSAPP FLOAT ====== -->
+<div class="whatsapp-float">
+  <div class="wa-tooltip">Discutons sur WhatsApp 💬</div>
+  <a href="https://wa.me/33646064391?text=Bonjour, je cherche une voiture." target="_blank" class="wa-btn" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+async function renderCars() {
+  const cars = await loadCars();
+  const latest = cars.slice(0, 3);
+  const container = document.getElementById('latestCars');
+  if (!container) return;
+  container.innerHTML = latest.length
+    ? latest.map(renderCarCard).join('')
+    : '<div class="empty-state"><p>Aucune voiture disponible pour le moment.</p></div>';
+  setTimeout(initScrollAnim, 100);
+}
+
+function searchRedirect() {
+  const brand = document.getElementById('filterBrand').value;
+  const budget = document.getElementById('filterBudget').value;
+  const fuel = document.getElementById('filterFuel').value;
+  const boite = document.getElementById('filterBoite').value;
+  let url = 'voitures.html?';
+  if (brand) url += `brand=${encodeURIComponent(brand)}&`;
+  if (budget) url += `budget=${budget}&`;
+  if (fuel) url += `fuel=${encodeURIComponent(fuel)}&`;
+  if (boite) url += `boite=${encodeURIComponent(boite)}&`;
+  window.location.href = url;
+}
+
+renderCars();
+</script>
+</body>
+</html>
