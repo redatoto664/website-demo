@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarEstima — L'estimation de voiture intelligente pour les professionnels</title>
+  <meta name="description" content="CarEstima aide les garages et concessionnaires du Maroc à estimer la valeur exacte de chaque véhicule en quelques secondes. Précis, rapide, fiable.">
+  <meta property="og:title" content="CarEstima — Estimation auto professionnelle">
+  <meta property="og:description" content="L'outil d'estimation de valeur véhicule pour les garages et concessionnaires au Maroc.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ══════════════════════════════════
+     NAVBAR
+══════════════════════════════════ -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-mark">C</div>
+        <div class="nav-logo-text">Car<span>Estima</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Fonctionnalités</a>
+        <a href="#how">Comment ça marche</a>
+        <a href="#pricing">Tarifs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#contact" class="btn-nav-outline">Se connecter</a>
+        <a href="#contact" class="btn-nav-primary">Demander une démo</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features">Fonctionnalités</a>
+  <a href="#how">Comment ça marche</a>
+  <a href="#pricing">Tarifs</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" style="color:var(--blue);font-weight:600">→ Demander une démo</a>
+</div>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section id="home" class="hero">
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Left -->
+      <div>
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          Disponible au Maroc
+        </div>
+        <h1 class="hero-title">
+          Estimez la vraie valeur<br>
+          de chaque <em>véhicule</em><br>
+          en quelques secondes
+        </h1>
+        <p class="hero-sub">
+          CarEstima donne à vos garages et concessionnaires un outil <strong>précis, rapide et fiable</strong> pour estimer la valeur de revente de n'importe quel véhicule — et conclure plus de ventes.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-hero-primary">
+            Demander une démo gratuite
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#how" class="btn-hero-secondary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            Voir comment ça marche
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Sans engagement
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Données 100% Maroc
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Support en arabe & français
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Mockup -->
+      <div class="hero-mockup">
+        <div class="mockup-card">
+          <div class="mockup-header">
+            <div class="mockup-title">Estimation CarEstima</div>
+            <div class="mockup-badge">✓ Analyse complète</div>
+          </div>
+          <div class="mockup-car">
+            <div class="mockup-car-name">Dacia Duster 2021</div>
+            <div class="mockup-car-details">Diesel · 45 000 km · Boîte manuelle · Blanc</div>
+          </div>
+          <div class="mockup-result">
+            <div class="mockup-result-label">Valeur estimée</div>
+            <div class="mockup-result-price" data-target="128000" data-suffix=" DH">0 DH</div>
+            <div class="mockup-result-range">Fourchette : 122 000 — 134 000 DH</div>
+          </div>
+          <div class="mockup-factors">
+            <div class="mockup-factor">
+              <span class="mockup-factor-label">Kilométrage</span>
+              <div class="mockup-factor-bar"><div class="mockup-factor-fill" data-width="82%" style="width:0"></div></div>
+              <span class="mockup-factor-val">+</span>
+            </div>
+            <div class="mockup-factor">
+              <span class="mockup-factor-label">État général</span>
+              <div class="mockup-factor-bar"><div class="mockup-factor-fill" data-width="90%" style="width:0"></div></div>
+              <span class="mockup-factor-val">++</span>
+            </div>
+            <div class="mockup-factor">
+              <span class="mockup-factor-label">Marché local</span>
+              <div class="mockup-factor-bar"><div class="mockup-factor-fill" data-width="74%" style="width:0"></div></div>
+              <span class="mockup-factor-val">~</span>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-floating-badge">
+          <div class="fb-icon">⚡</div>
+          <div>
+            <div class="fb-label">Temps d'estimation</div>
+            <div class="fb-value">8 secondes</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     LOGOS BAND
+══════════════════════════════════ -->
+<div class="logos-band">
+  <div class="container">
+    <div class="logos-band-inner">
+      <span class="logos-label">Fait pour les professionnels :</span>
+      <div class="logo-pill"><span>🔧</span> Garages indépendants</div>
+      <div class="logo-pill"><span>🏢</span> Concessionnaires</div>
+      <div class="logo-pill"><span>🚗</span> Vendeurs de VO</div>
+      <div class="logo-pill"><span>📋</span> Experts automobiles</div>
+      <div class="logo-pill"><span>🏦</span> Sociétés de leasing</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     PROBLEM SECTION
+══════════════════════════════════ -->
+<section id="problem" class="problem-section">
+  <div class="container">
+    <div class="problem-grid">
+      <div>
+        <div class="section-tag">Le problème</div>
+        <h2 class="section-title">Estimer un véhicule<br>à la main, c'est <em>risqué</em></h2>
+        <p class="section-sub">Les professionnels marocains perdent du temps et de l'argent à cause d'estimations imprécises ou subjectives.</p>
+        <div class="problem-points">
+          <div class="problem-point">
+            <div class="pp-icon pp-icon-red">❌</div>
+            <div>
+              <div class="pp-title">Estimations subjectives et incohérentes</div>
+              <div class="pp-text">Chaque vendeur estime différemment. Sans données fiables, vous risquez de surestimer ou sous-estimer un véhicule.</div>
+            </div>
+          </div>
+          <div class="problem-point">
+            <div class="pp-icon pp-icon-amber">⏱️</div>
+            <div>
+              <div class="pp-title">Perte de temps précieux</div>
+              <div class="pp-text">Consulter des annonces, appeler des confrères, faire des recherches manuelles — tout ça prend des heures.</div>
+            </div>
+          </div>
+          <div class="problem-point">
+            <div class="pp-icon pp-icon-purple">📉</div>
+            <div>
+              <div class="pp-title">Marges impactées</div>
+              <div class="pp-text">Une mauvaise estimation peut coûter des milliers de dirhams par transaction. Sur un an, l'impact est considérable.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="problem-visual">
+        <div class="problem-stat-card">
+          <div class="psc-label">Coût moyen d'une mauvaise estimation</div>
+          <div class="psc-num" data-target="8500" data-suffix=" DH">0 DH</div>
+          <div class="psc-text">par véhicule mal estimé, en marge perdue ou en coût de rachat surestimé.</div>
+          <div class="psc-divider"></div>
+          <div class="psc-sub-stats">
+            <div>
+              <div class="psc-sub-num" data-target="67" data-suffix="%">0%</div>
+              <div class="psc-sub-label">des garages n'ont pas d'outil d'estimation fiable</div>
+            </div>
+            <div>
+              <div class="psc-sub-num" data-target="3" data-suffix="h">0h</div>
+              <div class="psc-sub-label">perdues en moyenne par estimation manuelle</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FEATURES
+══════════════════════════════════ -->
+<section id="features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Fonctionnalités</div>
+      <h2 class="section-title">Tout ce dont votre <em>business</em> a besoin</h2>
+      <p class="section-sub">CarEstima est conçu spécifiquement pour le marché automobile marocain, avec des données locales en temps réel.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Estimation en 8 secondes</div>
+        <div class="feature-text">Entrez la marque, le modèle, l'année et le kilométrage. CarEstima analyse instantanément les données du marché marocain et vous donne une estimation précise.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">Données marché Maroc</div>
+        <div class="feature-text">Notre base de données est alimentée en continu par des milliers d'annonces et de transactions réelles au Maroc — pas des données européennes inadaptées.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <div class="feature-title">Fourchette de prix détaillée</div>
+        <div class="feature-text">Obtenez une valeur minimale, optimale et maximale avec les facteurs explicatifs : kilométrage, état, historique, tendances du marché local.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📄</div>
+        <div class="feature-title">Rapport PDF exportable</div>
+        <div class="feature-text">Générez un rapport d'estimation professionnel à partager avec vos clients ou à archiver. Renforce votre crédibilité et justifie votre prix.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <div class="feature-title">Historique & analytics</div>
+        <div class="feature-text">Suivez toutes vos estimations, analysez vos tendances et optimisez votre stratégie d'achat-revente grâce à un tableau de bord clair.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <div class="feature-title">Multi-utilisateurs</div>
+        <div class="feature-text">Donnez accès à toute votre équipe. Chaque vendeur peut estimer depuis son téléphone ou ordinateur, n'importe où, n'importe quand.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════ -->
+<section id="how" class="how-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Processus</div>
+      <h2 class="section-title">Simple comme <em>bonjour</em></h2>
+      <p class="section-sub">Aucune formation requise. Vos équipes sont opérationnelles en 5 minutes.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title">Saisissez le véhicule</div>
+        <div class="step-text">Marque, modèle, année, kilométrage, carburant, boîte de vitesses et état général.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title">Analyse instantanée</div>
+        <div class="step-text">CarEstima compare avec des milliers de données du marché marocain en temps réel.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title">Recevez l'estimation</div>
+        <div class="step-text">Une fourchette de prix précise avec les facteurs détaillés qui influencent la valeur.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-title">Concluez la vente</div>
+        <div class="step-text">Négociez avec confiance, exportez le rapport PDF et finalisez la transaction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PRICING
+══════════════════════════════════ -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Tarifs</div>
+      <h2 class="section-title">Des tarifs <em>transparents</em></h2>
+      <p class="section-sub">Choisissez le plan adapté à votre activité. Pas de frais cachés, pas d'engagement.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <div class="pricing-plan">Starter</div>
+        <div class="pricing-name">Essentiel</div>
+        <div class="pricing-desc">Pour les garages indépendants qui démarrent avec l'estimation digitale.</div>
+        <div class="pricing-price">
+          <div class="pricing-amount" data-monthly="299" data-annual="249">299 DH</div>
+          <div class="pricing-period">/mois</div>
+        </div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            50 estimations / mois
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            1 utilisateur
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Export PDF basique
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Support par email
+          </div>
+        </div>
+        <a href="#contact" class="btn-pricing-outline">Commencer</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-featured-badge">⭐ Le plus populaire</div>
+        <div class="pricing-plan">Pro</div>
+        <div class="pricing-name">Professionnel</div>
+        <div class="pricing-desc">Pour les concessions et garages avec un volume régulier de transactions.</div>
+        <div class="pricing-price">
+          <div class="pricing-amount" data-monthly="599" data-annual="499">599 DH</div>
+          <div class="pricing-period">/mois</div>
+        </div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Estimations illimitées
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            5 utilisateurs
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Rapports PDF personnalisés
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Dashboard analytics
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Support prioritaire WhatsApp
+          </div>
+        </div>
+        <a href="#contact" class="btn-pricing-white">Démarrer maintenant</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-plan">Enterprise</div>
+        <div class="pricing-name">Sur mesure</div>
+        <div class="pricing-desc">Pour les grandes concessions, réseaux et sociétés de leasing avec besoins spécifiques.</div>
+        <div class="pricing-price">
+          <div class="pricing-amount">Sur devis</div>
+          <div class="pricing-period">adapté à vos besoins</div>
+        </div>
+        <div class="pricing-divider"></div>
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Utilisateurs illimités
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Intégration API
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            White label possible
+          </div>
+          <div class="pricing-feature">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Account manager dédié
+          </div>
+        </div>
+        <a href="#contact" class="btn-pricing-outline">Nous contacter</a>
+      </div>
+
+    </div>
+    <p class="pricing-note">Tous les prix sont HT · <a href="#contact">Besoin d'aide pour choisir ?</a> Notre équipe vous guide.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════ -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Témoignages</div>
+      <h2 class="section-title">Ce que disent nos <em>clients</em></h2>
+      <p class="section-sub">Des professionnels marocains qui ont transformé leur façon d'estimer les véhicules.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text">"Avant CarEstima, on passait 2-3 heures à estimer chaque voiture. Maintenant c'est 8 secondes. Et nos marges ont augmenté de 15% en 3 mois."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">K</div>
+          <div>
+            <div class="author-name">Karim B.</div>
+            <div class="author-role">Gérant, Garage Auto Premium · Casablanca</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text">"Les données sont vraiment adaptées au marché marocain. C'est ce qui fait la différence — pas comme les outils européens qui ne correspondent pas à notre réalité."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">S</div>
+          <div>
+            <div class="author-name">Said M.</div>
+            <div class="author-role">Directeur commercial, AutoMaroc Rabat</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text">"Le rapport PDF qu'on envoie aux clients change tout. Ça professionnalise notre démarche et les clients font beaucoup plus confiance à nos estimations."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">F</div>
+          <div>
+            <div class="author-name">Fatima Z.</div>
+            <div class="author-role">Responsable VO, Concession Marrakech</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA SECTION
+══════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-tag" style="color:#93c5fd;margin-bottom:12px">Prêt à commencer ?</div>
+      <h2 class="section-title">Essayez CarEstima<br><em>gratuitement</em></h2>
+      <p class="section-sub">Démo gratuite · Pas de carte bancaire · Réponse en moins de 24h</p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn-hero-primary">
+          Demander ma démo gratuite
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#pricing" class="btn-hero-secondary">Voir les tarifs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CONTACT
+══════════════════════════════════ -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <div class="section-tag">Contact</div>
+        <h2 class="section-title">Parlons de votre <em>projet</em></h2>
+        <p class="section-sub">Remplissez le formulaire ou contactez-nous directement. Notre équipe vous répond sous 24h.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-value">contact@carestima.ma</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">💬</div>
+            <div>
+              <div class="ci-label">WhatsApp</div>
+              <div class="ci-value">+212 6XX XXX XXX</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <div class="ci-label">Basé à</div>
+              <div class="ci-value">Casablanca, Maroc</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">🕐</div>
+            <div>
+              <div class="ci-label">Disponibilité</div>
+              <div class="ci-value">Lun–Ven · 9h–18h</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Demander une démo gratuite</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Prénom *</label>
+              <input type="text" name="prenom" placeholder="Votre prénom" required>
+            </div>
+            <div class="form-group">
+              <label>Nom *</label>
+              <input type="text" name="nom" placeholder="Votre nom" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email professionnel *</label>
+            <input type="email" name="email" placeholder="vous@societe.ma" required>
+          </div>
+          <div class="form-group">
+            <label>Téléphone / WhatsApp *</label>
+            <input type="tel" name="tel" placeholder="+212 6XX XXX XXX" required>
+          </div>
+          <div class="form-group">
+            <label>Type d'activité</label>
+            <select name="activite">
+              <option value="">Sélectionner...</option>
+              <option>Garage indépendant</option>
+              <option>Concessionnaire automobile</option>
+              <option>Vendeur de véhicules d'occasion</option>
+              <option>Expert automobile</option>
+              <option>Société de leasing</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (optionnel)</label>
+            <textarea name="message" placeholder="Parlez-nous de votre activité, vos besoins, vos questions..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Demander une démo gratuite
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Votre demande a été envoyée ! Nous vous contactons sous 24h.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="display:inline-flex">
+          <div class="nav-logo-mark">C</div>
+          <div class="nav-logo-text" style="color:white">Car<span>Estima</span></div>
+        </a>
+        <p>L'outil d'estimation de valeur véhicule conçu pour les professionnels de l'automobile au Maroc.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="#features">Fonctionnalités</a></li>
+          <li><a href="#how">Comment ça marche</a></li>
+          <li><a href="#pricing">Tarifs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Demander une démo</a></li>
+          <li><a href="#testimonials">Témoignages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGU</a></li>
+          <li><a href="#">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 <span>CarEstima</span> — Tous droits réservés · Casablanca, Maroc</p>
+      <p>Remplacez "CarEstima" par le vrai nom de l'app 🚀</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
